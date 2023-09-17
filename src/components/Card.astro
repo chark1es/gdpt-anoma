@@ -1,0 +1,16 @@
+---
+
+const {
+    class: className
+    
+} = Astro.props;
+
+---
+
+<card class={className}>
+
+    <div class="mx-5 mt-10 py-5 border-2 border-green-600 shadow-md rounded-md">
+        <slot />
+    </div>
+
+</card>

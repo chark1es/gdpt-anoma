@@ -1,0 +1,38 @@
+---
+// Import the global.css file here so that it is included on
+// all pages through the use of the <SEO /> component.
+import "../styles/globals.scss";
+
+import SEO from "../components/SEO.astro";
+import Navigation from "@/components/Navigation.astro";
+
+const {
+    class: className,
+    title,
+    description,
+    keywords,
+    url,
+    // twitterhandle,
+    image
+} = Astro.props;
+---
+
+<html lang="en">
+    <head class="">
+        <SEO
+            title={title}
+            description={description}
+            keywords={keywords}
+            url={url}
+            image="/favicon.svg"
+        />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    
+    </head>
+    <Navigation></Navigation>
+    <body class="dark:bg-dark_mode_bg bg-neutral-50">
+        <main class={className}>
+            <slot />
+        </main>
+    </body>
+</html>
