@@ -9,6 +9,5 @@ import cloudflare from "@astrojs/cloudflare";
 export default defineConfig({
     integrations: [decapCmsOauth(), tailwind(), mdx()],
     output: "server",
-    adapter: cloudflare(),
-    platform: "node"
+    adapter: cloudflare()
 });
