@@ -12,7 +12,7 @@ export default defineConfig({
         tailwind(),
         mdx()
     ]
-    output: "server",
+    output: "server"
 });
 
 export interface DecapCMSOptions {
@@ -26,5 +26,5 @@ const defaultOptions: DecapCMSOptions = {
   adminRoute: "/admin",
   oauthDisabled: false,
   oauthLoginRoute: "/oauth",
-  oauthCallbackRoute: "/oauth/callback",
+  oauthCallbackRoute: "/oauth/callback"
 }; 
