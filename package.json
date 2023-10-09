@@ -14,13 +14,18 @@
     "@astrojs/tailwind": "^5.0.0",
     "@fontsource-variable/jetbrains-mono": "^5.0.13",
     "@fontsource-variable/open-sans": "^5.0.13",
+    "@mdx-js/mdx": "^2.3.0",
+    "@mdx-js/react": "^2.3.0",
     "@tailwindcss/typography": "^0.5.10",
     "astro": "^3.0.13",
+    "markdown-it": "^13.0.2",
     "prettier": "^3.0.3",
     "prettier-plugin-astro": "^0.12.0",
     "tailwindcss": "^3.0.24"
   },
   "devDependencies": {
+    "@types/markdown-it": "^13.0.2",
+    "@types/node": "^20.8.3",
     "sass": "^1.67.0"
   }
 }

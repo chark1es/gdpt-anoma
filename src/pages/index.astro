@@ -30,17 +30,6 @@ const formattedDate = laTime.toLocaleDateString("en-US", {
     day: "numeric",
     timeZone: "UTC"
 });
-
-// Get the absolute file path from the moduleId property
-const absoluteFilePath = mostRecentPost.default.moduleId;
-
-// Convert the absolute file path to a relative file path
-const relativeFilePath = absoluteFilePath.substring(
-    absoluteFilePath.indexOf("/src/")
-);
-
-// Load the content of the most recent post as a component
-const Content = await import(/* @vite-ignore */ `${relativeFilePath}`);
 ---
 
 <Layout title="Home | GĐPT Anôma">
@@ -61,7 +50,7 @@ const Content = await import(/* @vite-ignore */ `${relativeFilePath}`);
             <br />
         </>
         <div class="text-gdpt_gray">
-            <Content.default />
+            <mostRecentPost.default />
         </div>
     </Card>
 </Layout>
