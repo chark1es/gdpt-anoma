@@ -11,7 +11,7 @@ export default defineConfig({
         
         tailwind(),
         mdx()
-    ]
+    ],
     output: "server"
 });
 
