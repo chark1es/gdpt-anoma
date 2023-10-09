@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-	theme: {
-		extend: {
-			fontFamily: {
+    content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+    theme: {
+        extend: {
+            fontFamily: {
                 body: ["Inter", "Sans Serif"],
                 title: ["Inter", "Sans Serif"]
             },
@@ -57,8 +57,8 @@ module.exports = {
                     }
                 ]
             },
-			colors: {
-				black: {
+            colors: {
+                black: {
                     DEFAULT: "#000000",
                     50: "#E6E6E6",
                     100: "#CCCCCC",
@@ -97,12 +97,11 @@ module.exports = {
                     900: "#313131",
                     950: "#1a1a1a"
                 },
-				"gdpt_gray": "#535353",
-				"gdpt_green": "#0d8d4a"
-		
-			}
-		},
-	},
-	plugins: [require("@tailwindcss/typography")],
-	
-}
+                gdpt_gray: "#535353",
+                gdpt_green: "#0d8d4a",
+                gdpt_light_green: "#55af80"
+            }
+        }
+    },
+    plugins: [require("@tailwindcss/typography")]
+};

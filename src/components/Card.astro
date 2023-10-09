@@ -1,16 +1,11 @@
 ---
-
-const {
-    class: className
-    
-} = Astro.props;
-
+const { class: className } = Astro.props;
 ---
 
-<card class={className}>
-
-    <div class="mx-5 mt-10 py-5 border-2 border-green-600 shadow-md rounded-md">
+<card>
+    <div
+        class={`w-[75%] justify-center mx-auto mt-4 bg-gray-100 px-5 py-5 rounded-md ${className}`}
+    >
         <slot />
     </div>
-
 </card>

@@ -1,50 +1,42 @@
 ---
 import { Image } from "astro:assets";
-import { Icon } from 'astro-icon'
+import { Icon } from "astro-icon";
 ---
 
-
 <nav
-  class="mt-5 flex h-12 mx-5 items-center justify-center gap-x-2 rounded-md bg-white border-2 border-green-600 px-12 shadow-md">
-  <div class="flex flex-1 justify-end gap-x-2">
-    <a
-      href="/"
-      class=" px-2 py-1 text-md uppercase tracking-wider font-bold text-gdpt_gray"
-      ><span class="flex items-center gap-x-1 ">
-        Home</span
-      >
-    </a>
-    <a
-      href="/"
-      class=" px-2 py-1 text-md uppercase tracking-wider font-bold text-gdpt_gray"
-      ><span class="flex items-center gap-x-1">
-        About us</span
-      >
-    </a>
-  </div>
-  <div class="flex-shrink-0">
-    <img
-      src="/logo.png"
-      alt=""
-      width=75
-      height=75
-      class="object-fit h-auto max-w-full"
-    />
-  </div>
-  <div class="flex flex-1 justify-start gap-x-2">
-    <a
-      href="/"
-      class=" px-2 py-1 text-md uppercase tracking-wider font-bold text-gdpt_gray"
-      ><span class="flex items-center gap-x-1">
-        Forms</span
-      >
-    </a>
-    <a
-      href="/"
-      class=" px-2 py-1 text-md uppercase tracking-wider font-bold text-gdpt_gray"
-      ><span class="flex items-center gap-x-1">
-        Contact us</span
-      >
-    </a>
-  </div>
+    class="mt-1 bg-white flex py-4 mx-5 items-center justify-center gap-x-2 rounded-md px-12"
+>
+    <div class="flex flex-1 justify-end gap-x-10 pr-10">
+        <a
+            href="/"
+            class="px-2 py-1 text-md uppercase tracking-wider font-bold text-gdpt_gray"
+            ><span class="flex items-center gap-x-1">Home</span>
+        </a>
+        <a
+            href="/"
+            class="px-2 py-1 text-md uppercase tracking-wider font-bold text-gdpt_gray"
+            ><span class="flex items-center gap-x-1">About us</span>
+        </a>
+    </div>
+    <div class="flex-shrink-0">
+        <img
+            src="/logo.png"
+            alt=""
+            width="75"
+            height="75"
+            class="object-fit h-auto max-w-full"
+        />
+    </div>
+    <div class="flex flex-1 justify-start pl-10 gap-x-10">
+        <a
+            href="/"
+            class="px-2 py-1 text-md uppercase tracking-wider font-bold text-gdpt_gray"
+            ><span class="flex items-center gap-x-1">Forms</span>
+        </a>
+        <a
+            href="/"
+            class="px-2 py-1 text-md uppercase tracking-wider font-bold text-gdpt_gray"
+            ><span class="flex items-center gap-x-1">Contact us</span>
+        </a>
+    </div>
 </nav>

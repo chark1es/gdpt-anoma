@@ -1,10 +1,67 @@
 ---
-import Layout from "../layouts/Layout.astro"
-import Card from "../components/Card.astro"
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+
+// Retrieve and sort the posts
+const posts = await Astro.glob("../content/announcements/*.mdx");
+const mostRecentPost = posts.sort(
+    (a, b) => new Date(b.frontmatter.pubDate) - new Date(a.frontmatter.pubDate)
+)[0];
+
+// Extract the post data
+const { title, description, pubDate, updatedDate, heroImage, tags } =
+    mostRecentPost.frontmatter;
+
+// Generate the ogUrl (we'll assume Astro.url.origin is defined, adjust if necessary)
+const ogUrl = new URL(
+    heroImage ? heroImage : `${title.replace(/\s+/g, "-").toLowerCase()}.png`,
+    Astro.url.origin
+).href;
+
+// Parse the date from the frontmatter and adjust to LA timezone
+const date = new Date(pubDate);
+const laTimeOffset = -7; // Adjust as necessary for DST
+const laTime = new Date(date.getTime() - laTimeOffset * 60 * 60 * 1000);
+
+// Format the date to a readable format
+const formattedDate = laTime.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC"
+});
+
+// Get the absolute file path from the moduleId property
+const absoluteFilePath = mostRecentPost.default.moduleId;
+
+// Convert the absolute file path to a relative file path
+const relativeFilePath = absoluteFilePath.substring(
+    absoluteFilePath.indexOf("/src/")
+);
+
+// Load the content of the most recent post as a component
+const Content = await import(/* @vite-ignore */ `${relativeFilePath}`);
 ---
 
 <Layout title="Home | GĐPT Anôma">
-    <Card>
-        <div class="text-3xl font-bold text-gdpt_gray text-center">Announcements</div>
+    <Card class="">
+        <div class="text-3xl font-bold text-gdpt_gray text-center">
+            Announcements
+        </div>
+        <>
+            <div class="text-2xl font-bold text-gdpt_gray">
+                {title}
+            </div>
+            <div class="text-gdpt_gray">
+                {formattedDate}
+            </div>
+            <div class="text-gdpt_gray">
+                {description}
+            </div>
+            <br />
+        </>
+        <div class="text-gdpt_gray">
+            <Content.default />
+        </div>
     </Card>
 </Layout>
