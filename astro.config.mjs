@@ -27,4 +27,4 @@ const defaultOptions: DecapCMSOptions = {
   oauthDisabled: false,
   oauthLoginRoute: "/oauth",
   oauthCallbackRoute: "/oauth/callback",
-};
+}; 
