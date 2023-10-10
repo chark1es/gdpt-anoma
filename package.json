@@ -20,11 +20,16 @@
         "@tailwindcss/typography": "^0.5.10",
         "astro": "^3.0.13",
         "astro-decap-cms": "^0.1.0",
-        "astro-decap-cms-oauth": "^0.2.6",
+        "fs": "^0.0.1-security",
+        "http": "^0.0.1-security",
+        "https": "^1.0.0",
         "markdown-it": "^13.0.2",
         "prettier": "^3.0.3",
         "prettier-plugin-astro": "^0.12.0",
-        "tailwindcss": "^3.0.24"
+        "querystring": "^0.2.1",
+        "stream": "^0.0.2",
+        "tailwindcss": "^3.0.24",
+        "util": "^0.12.5"
     },
     "devDependencies": {
         "@types/markdown-it": "^13.0.2",

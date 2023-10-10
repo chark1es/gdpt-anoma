@@ -12,19 +12,6 @@ export const SITE: Site = {
         "Personal portfolio, landing page, page template, developer portfoliom designer portfolio",
     postPerPage: 3
 };
-export interface DecapCMSOptions {
-    adminRoute?: string;
-    oauthDisabled?: boolean;
-    oauthLoginRoute?: string;
-    oauthCallbackRoute?: string;
-}
-
-export const defaultOptions: DecapCMSOptions = {
-    adminRoute: "/admin",
-    oauthDisabled: false,
-    oauthLoginRoute: "/oauth",
-    oauthCallbackRoute: "/oauth/callback"
-};
 
 // The site uses iconify - you can find icons on https://iconify.design/.
 
